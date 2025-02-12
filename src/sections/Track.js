@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Track = () => {
+  const [selectedTrack, setSelectedTrack] = useState(1);
   const trackList = [
     {
       id: 1,
@@ -42,27 +43,33 @@ const Track = () => {
     <Wrapper>
       <Title>트랙소개</Title>
       <Content>
-        영남대학교 멋쟁이사자처럼 12기는 기획/디자인, Front-end, Back-end 파트로 나누어 아기사자를 모집합니다. <br />
+        영남대학교 멋쟁이사자처럼 13기는 기획/디자인, Front-end, Back-end 파트로 나누어 아기사자를 모집합니다. <br />
         코딩이 익숙하지 않은 비전공자/전공자여도 중앙 멋쟁이사자에서 제공하는 VOD강의와 자체적으로 제공하는 교육 자료들로 충분히 실력을 키울 수 있습니다.
       </Content>
       <TrackDetail>
         <ButtonContainer>
-          <ButtonItem>Product Manager & Designer</ButtonItem>
-          <ButtonItem>Frontend</ButtonItem>
-          <ButtonItem>Backend</ButtonItem>
+          {trackList.map(trackData => (
+            <ButtonItem
+              key={trackData.id}
+              onClick={()=>setSelectedTrack(trackData.id)}
+              active = {selectedTrack === trackData.id}
+            >{trackData.title}</ButtonItem>
+          ))}
         </ButtonContainer>
         <TrackContainer>
-          {trackList.map(trackData => (
-            <TrackBox key={trackData.id}>
-              <TrackTitle>{trackData.title}</TrackTitle>
-              <TrackSubTitle>{trackData.subTitle}</TrackSubTitle>
-              <ContentContainer>
-                {trackData.contentList.map((content, index) => (
-                  <TrackContent key={index}>{content}</TrackContent>
-                ))}
-              </ContentContainer>
-            </TrackBox>
-          ))}
+          <TrackSlider selectedTrack={selectedTrack}>
+            {trackList.map(trackData => (
+              <TrackBox key={trackData.id}>
+                <TrackTitle>{trackData.title}</TrackTitle>
+                <TrackSubTitle>{trackData.subTitle}</TrackSubTitle>
+                <ContentContainer>
+                  {trackData.contentList.map((content, index) => (
+                    <TrackContent key={index}>{content}</TrackContent>
+                  ))}
+                </ContentContainer>
+              </TrackBox>
+            ))}
+          </TrackSlider>
         </TrackContainer>
       </TrackDetail>
     </Wrapper>
@@ -72,9 +79,9 @@ const Track = () => {
 export default Track;
 
 const Wrapper = styled.div`
-  /* width: 100vw; */
+  width: 100%;
   background-color: black;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   color: white;
 `;
 const Title = styled.div`
@@ -94,26 +101,30 @@ const TrackDetail = styled.div`
 
 const ButtonContainer = styled.div`
   display: flex;
-  color: #ABABAB;
-`;
+  `;
 const ButtonItem = styled.div`
   margin: 50px 70px 40px 0px;
   font-size: 24px;
+  color: ${props => props.active ? "white" : "#ABABAB"};
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
 `;
 
 const TrackContainer = styled.div`
-  /* isolation: isolate; */
-  display: flex;
-  /* padding: 30px; */
-  /* flex-wrap: nowrap; */
-  overflow: hidden;
-  gap: 40px;
+  overflow: clip;
+  padding: 0 200px;
+  margin: 0 -200px;
 `;
+const TrackSlider = styled.div`
+  display: flex;
+  gap: 40px;
+  transition: transform 0.6s ease-in-out;
+  transform: translateX(${props => (props.selectedTrack - 1) * -1460}px); // 박스 너비(1420px) + gap(40px)
+`;
+
 const TrackBox = styled.div`
-  isolation: isolate;
-  /* width: 100vw; */
+  flex-shrink: 0;
   background-color: rgba(171, 171, 171, 0.2);
-  /* border: 1px solid rgba(171, 171, 171, 0.15); */
   border: 1px solid rgba(222, 222, 222, 0.4);
   border-radius: 40px;
   width: 1420px;
