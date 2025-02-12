@@ -63,7 +63,6 @@ const Wrapper = styled.div`
   background-color: black;
   color: white;
   width: 100%;
-  margin: 300px 0px;
 `;
 const Title = styled.div`
   font-size: 40px;
