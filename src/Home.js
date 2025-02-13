@@ -17,15 +17,15 @@ import {
 
 const Home = () => {
   return (
-    <Background>
+    <Background className="background">
       <Header />
       <ContentContainer>
         <Apply />
         <Introduction />
-        <Track />
-        <Activity />
-        <Schedule />
-        <Question />
+        <Track id="track" />
+        <Activity id="activity" />
+        <Schedule id="schedule" />
+        <Question id="question" />
       </ContentContainer>
       <Footer />
       <LionImg />
@@ -43,6 +43,7 @@ const Background = styled.div`
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  overflow-y: auto;
   background-color: #000;
   width: 100%;
   height: 100vh;

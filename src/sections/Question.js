@@ -1,17 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Question = () => {
+const Question = (props) => {
   const qnaList = [
     {
       id: 1,
       question: '합격 정원은 몇 명인가요?',
-      answer: '예정 선발 인원은 기획/디자인 4명, 프론트 12명, 백엔드 8명으로 1/3/2(디/프/백) 비율로 총 4팀 구성됩니다.',
+      answer:
+        '예정 선발 인원은 기획/디자인 4명, 프론트 12명, 백엔드 8명으로 1/3/2(디/프/백) 비율로 총 4팀 구성됩니다.',
     },
     {
       id: 2,
       question: '2학기에도 아기사자 모집을 진행하나요?',
-      answer: '멋사 활동은 1년을 기준으로 모집하기 때문에 매년 1학기에만 신입 부원을 모집합니다.',
+      answer:
+        '멋사 활동은 1년을 기준으로 모집하기 때문에 매년 1학기에만 신입 부원을 모집합니다.',
     },
     {
       id: 3,
@@ -43,14 +45,14 @@ const Question = () => {
     },
   ];
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <Title>자주 묻는 질문</Title>
       <QuestionContainer>
-        {qnaList.map(qna => (
-          <QnABox key = {qna.id}>
+        {qnaList.map((qna) => (
+          <QnABox key={qna.id}>
             <QuestionContent>Q. {qna.question}</QuestionContent>
             <Answer>
-              {qna.answer.split('\n').map(item => (
+              {qna.answer.split('\n').map((item) => (
                 <AnswerContent key={item}>{item}</AnswerContent>
               ))}
             </Answer>
@@ -76,7 +78,7 @@ const Title = styled.div`
   font-weight: bolder;
 `;
 const QuestionContainer = styled.div`
-  margin-bottom:  500px;
+  margin-bottom: 500px;
 `;
 const QnABox = styled.div`
   font-size: 17px;

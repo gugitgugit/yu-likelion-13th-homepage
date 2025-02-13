@@ -44,42 +44,40 @@ const Apply = () => {
   };
 
   return (
-    <>
-      <ApplyWrapper>
-        <ContentWrapper>
-          <MainImage src={mainImg} />
-          <Title>내 아이디어를 내 손으로 실현하자!</Title>
-          <Description>
-            영남대학교 멋쟁이사자처럼은 웹 개발을 중점으로 하는 IT 동아리입니다.
-            <br />
-            기획, 디자인, 개발을 아우르는 협업을 통해, 팀 프로젝트로 실용적인
-            서비스를 직접 만들어보는 경험을 할 수 있습니다.
-          </Description>
-        </ContentWrapper>
-        <TimerWrapper>
-          <TimerTitle>서류접수 마감까지</TimerTitle>
-          <TimerContainer>
-            <TimeBox>
-              <Number>{timeLeft.days[0]}</Number>
-              <Number>{timeLeft.days[1]}</Number>
-              <TimerText>일</TimerText>
-            </TimeBox>
-            <TimeBox>
-              <Number>{timeLeft.hours[0]}</Number>
-              <Number>{timeLeft.hours[1]}</Number>
-              <TimerText>시</TimerText>
-            </TimeBox>
-            <TimeBox>
-              <Number>{timeLeft.minutes[0]}</Number>
-              <Number>{timeLeft.minutes[1]}</Number>
-              <TimerText>분</TimerText>
-            </TimeBox>
-          </TimerContainer>
-        </TimerWrapper>
-        <ApplyButton>13기 지원하기</ApplyButton>
-        <ArrowImage src={arrowImg} onClick={handleScrollDown} />
-      </ApplyWrapper>
-    </>
+    <ApplyWrapper>
+      <ContentWrapper>
+        <MainImage src={mainImg} />
+        <Title>내 아이디어를 내 손으로 실현하자!</Title>
+        <Description>
+          영남대학교 멋쟁이사자처럼은 웹 개발을 중점으로 하는 IT 동아리입니다.
+          <br />
+          기획, 디자인, 개발을 아우르는 협업을 통해, 팀 프로젝트로 실용적인
+          서비스를 직접 만들어보는 경험을 할 수 있습니다.
+        </Description>
+      </ContentWrapper>
+      <TimerWrapper>
+        <TimerTitle>서류접수 마감까지</TimerTitle>
+        <TimerContainer>
+          <TimeBox>
+            <Number>{timeLeft.days[0]}</Number>
+            <Number>{timeLeft.days[1]}</Number>
+            <TimerText>일</TimerText>
+          </TimeBox>
+          <TimeBox>
+            <Number>{timeLeft.hours[0]}</Number>
+            <Number>{timeLeft.hours[1]}</Number>
+            <TimerText>시</TimerText>
+          </TimeBox>
+          <TimeBox>
+            <Number>{timeLeft.minutes[0]}</Number>
+            <Number>{timeLeft.minutes[1]}</Number>
+            <TimerText>분</TimerText>
+          </TimeBox>
+        </TimerContainer>
+      </TimerWrapper>
+      <ApplyButton>13기 지원하기</ApplyButton>
+      <ArrowImage src={arrowImg} onClick={handleScrollDown} />
+    </ApplyWrapper>
   );
 };
 
@@ -189,16 +187,15 @@ const ArrowImage = styled.img`
   }
 `;
 
-const ApplyButton = styled.button`
-  width: 211px;
-  height: 69px;
+const ApplyButton = styled.a`
   display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 20px 40px;
-  background-color: #f07f36;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
   border-radius: 80px;
-  border: none;
+  background: #f07f36;
   cursor: pointer;
   font-size: 22px;
   color: #ffffff;

@@ -7,7 +7,7 @@ import Study from '../assets/activity/study.png';
 import Hackathon from '../assets/activity/hackathon.png';
 import DemoDay from '../assets/activity/demoday.png';
 
-const Activity = () => {
+const Activity = (props) => {
   const activityList = [
     {
       id: 1,
@@ -41,7 +41,7 @@ const Activity = () => {
     },
   ];
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <Title>주요 활동</Title>
       <ActivityContainer>
         {activityList.map((activity) => (
