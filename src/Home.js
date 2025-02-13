@@ -29,5 +29,8 @@ export default Home;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0px 200px;
+  /* padding: 0px 200px; */
+  padding-left: 180px;
+  align-items: flex-start;
+  overflow-x: hidden;
 `;
