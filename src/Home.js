@@ -8,29 +8,48 @@ import Schedule from './sections/Schedule';
 import Question from './sections/Question';
 import Footer from './sections/Footer';
 import styled from 'styled-components';
+import {
+  Ellipse1,
+  Ellipse2,
+  Ellipse3,
+  LionImg,
+} from './components/background/Background';
 
 const Home = () => {
   return (
-    <Container>
+    <Background>
       <Header />
-      <Apply />
-      <Introduction />
-      <Track />
-      <Activity />
-      <Schedule />
-      <Question />
+      <ContentContainer>
+        <Apply />
+        <Introduction />
+        <Track />
+        <Activity />
+        <Schedule />
+        <Question />
+      </ContentContainer>
       <Footer />
-    </Container>
+      <LionImg />
+      <Ellipse1 />
+      <Ellipse2 />
+      <Ellipse3 />
+    </Background>
   );
 };
 
 export default Home;
 
-const Container = styled.div`
+const Background = styled.div`
   display: flex;
   flex-direction: column;
-  /* padding: 0px 200px; */
-  padding-left: 180px;
-  align-items: flex-start;
+  align-items: center;
   overflow-x: hidden;
+  background-color: #000;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+`;
+
+const ContentContainer = styled.div`
+  width: 1520px;
+  z-index: 2;
 `;

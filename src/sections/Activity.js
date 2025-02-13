@@ -11,32 +11,32 @@ const Activity = () => {
   const activityList = [
     {
       id: 1,
-      title: "1학기 정기 세션",
+      title: '1학기 정기 세션',
       img: Session,
     },
     {
       id: 2,
-      title: "네트워킹 데이",
+      title: '네트워킹 데이',
       img: NetworkingDay,
     },
     {
       id: 3,
-      title: "아이디어톤",
+      title: '아이디어톤',
       img: Ideathon,
     },
     {
       id: 4,
-      title: "스터디",
+      title: '스터디',
       img: Study,
     },
     {
       id: 5,
-      title: "해커톤",
+      title: '해커톤',
       img: Hackathon,
     },
     {
       id: 6,
-      title: "데모데이",
+      title: '데모데이',
       img: DemoDay,
     },
   ];
@@ -44,26 +44,22 @@ const Activity = () => {
     <Wrapper>
       <Title>주요 활동</Title>
       <ActivityContainer>
-        {activityList.map(activity => (
-          <ActivityContent 
-            key={activity.id}
-            bgimg={activity.img}
-          >
+        {activityList.map((activity) => (
+          <ActivityContent key={activity.id} bgimg={activity.img}>
             <ActivityTitle>{activity.title}</ActivityTitle>
           </ActivityContent>
         ))}
       </ActivityContainer>
     </Wrapper>
-  )
+  );
 };
 
 export default Activity;
 
 const Wrapper = styled.div`
-  margin: 160px 0px;
-  background-color: black;
   color: white;
-  width: 100%;
+  position: absolute;
+  top: 3597px;
 `;
 const Title = styled.div`
   font-size: 40px;
@@ -76,13 +72,13 @@ const ActivityContainer = styled.div`
   gap: 35px;
 `;
 const ActivityContent = styled.div`
-  background-image: 
-  linear-gradient(rgba(79, 39, 21, 0.8), transparent), 
-  url(${props => props.bgimg});
+  background-image:
+    linear-gradient(rgba(79, 39, 21, 0.8), transparent),
+    url(${(props) => props.bgimg});
   background-size: cover;
   border: 1.2px solid rgba(255, 255, 255, 0.5);
   border-radius: 40px;
-  width: 450px;
+  width: 480px;
   height: 280px;
 `;
 const ActivityTitle = styled.div`
