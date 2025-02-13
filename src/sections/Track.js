@@ -84,6 +84,7 @@ const Track = () => {
 export default Track;
 
 const Wrapper = styled.div`
+  margin: 160px 0px;
   width: 100%;
   color: white;
   position: absolute;
