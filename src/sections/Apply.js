@@ -57,7 +57,7 @@ const Apply = () => {
           </Description>
         </ContentWrapper>
         <TimerWrapper>
-          <TimerTitle>서류접수까지</TimerTitle>
+          <TimerTitle>서류접수 마감까지</TimerTitle>
           <TimerContainer>
             <TimeBox>
               <Number>{timeLeft.days[0]}</Number>
