@@ -54,8 +54,8 @@ const Schedule = () => {
 export default Schedule;
 
 const Wrapper = styled.div`
+  margin: 160px 0px;
   width: 100%;
-  margin: 500px 0px;
   background-color: black;
   color: white;
 `;

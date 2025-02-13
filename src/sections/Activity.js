@@ -60,6 +60,7 @@ const Activity = () => {
 export default Activity;
 
 const Wrapper = styled.div`
+  margin: 160px 0px;
   background-color: black;
   color: white;
   width: 100%;
