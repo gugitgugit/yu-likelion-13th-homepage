@@ -1,49 +1,49 @@
 import React from 'react';
 import styled from 'styled-components';
-import ThreeArrows from '../assets/three-arrows.png'
+import ThreeArrows from '../assets/three-arrows.png';
 
 const Schedule = () => {
   const scheduleList = [
     {
       id: 1,
       month: 3,
-      content: ["1학기 정기 세션 시작", "네트워킹 데이"]
+      content: ['1학기 정기 세션 시작', '네트워킹 데이'],
     },
     {
       id: 2,
       month: 5,
-      content: ["아이디어톤"]
+      content: ['아이디어톤'],
     },
     {
       id: 3,
       month: 8,
-      content: ["해커톤"]
+      content: ['해커톤'],
     },
     {
       id: 4,
       month: 12,
-      content: ["데모데이"]
+      content: ['데모데이'],
     },
   ];
   return (
     <Wrapper>
       <Title>연간 일정</Title>
       <ScheduleContainer>
-        {scheduleList.map(schedule=>(
+        {scheduleList.map((schedule) => (
           <>
             <ScheduleBox key={schedule.id}>
               <ScheduleMonth>{schedule.month}월</ScheduleMonth>
               <MainEvent>
-                {schedule.content.map((event, index)=>(
+                {schedule.content.map((event, index) => (
                   <DetailSchedule key={index}>{event}</DetailSchedule>
                 ))}
               </MainEvent>
             </ScheduleBox>
-            {schedule.id === 4 ? null :
+            {schedule.id === 4 ? null : (
               <IconContainer>
-                <NextIcon src={ThreeArrows}/>
+                <NextIcon src={ThreeArrows} />
               </IconContainer>
-            }
+            )}
           </>
         ))}
       </ScheduleContainer>
@@ -54,10 +54,10 @@ const Schedule = () => {
 export default Schedule;
 
 const Wrapper = styled.div`
-  margin: 160px 0px;
   width: 100%;
-  background-color: black;
   color: white;
+  position: absolute;
+  top: 4675px;
 `;
 const Title = styled.div`
   margin-bottom: 30px;
@@ -76,7 +76,7 @@ const ScheduleBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   border: 1px solid rgba(222, 222, 222, 0.4);
   background-color: rgba(171, 171, 171, 0.2);
   border-radius: 40px;
@@ -87,7 +87,7 @@ const ScheduleMonth = styled.div`
   padding: 10px;
   font-size: 40px;
   font-weight: bolder;
-  color: #ABB6FF;
+  color: #abb6ff;
 `;
 const MainEvent = styled.div`
   padding: 10px;
@@ -97,7 +97,7 @@ const MainEvent = styled.div`
 `;
 const DetailSchedule = styled.div`
   font-size: 22px;
-  color: #ABABAB;
+  color: #ababab;
 `;
 
 const IconContainer = styled.div`
