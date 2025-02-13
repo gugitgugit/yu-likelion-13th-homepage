@@ -84,7 +84,7 @@ const Track = (props) => {
 export default Track;
 
 const Wrapper = styled.div`
-  margin: 160px 0px;
+  margin: 160px 200px;
   width: 100%;
   color: white;
   position: absolute;
@@ -92,13 +92,13 @@ const Wrapper = styled.div`
 `;
 const Title = styled.div`
   margin-bottom: 15px;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
 `;
 const Content = styled.div`
   margin-bottom: 24px;
   color: #ababab;
-  font-size: 22px;
+  font-size: 17px;
   line-height: 180%;
 `;
 
@@ -108,8 +108,8 @@ const ButtonContainer = styled.div`
   display: flex;
 `;
 const ButtonItem = styled.div`
-  margin: 50px 70px 40px 0px;
-  font-size: 24px;
+  margin: 40px 70px 30px 0px;
+  font-size: 17px;
   color: ${(props) => (props.active ? 'white' : '#ABABAB')};
   cursor: pointer;
   transition: color 0.3s ease-in-out;
@@ -125,27 +125,27 @@ const TrackSlider = styled.div`
   gap: 40px;
   transition: transform 0.6s ease-in-out;
   transform: translateX(
-    ${(props) => (props.selectedTrack - 1) * -1460}px
+    ${(props) => (props.selectedTrack - 1) * -1160}px
   ); // 박스 너비(1420px) + gap(40px)
 `;
 
 const TrackBox = styled.div`
   flex-shrink: 0;
   background-color: rgba(171, 171, 171, 0.2);
-  border: 1px solid rgba(222, 222, 222, 0.4);
-  border-radius: 40px;
-  width: 1420px;
-  height: 480px;
+  border: 1px solid rgba(153, 153, 153, 0.2);
+  border-radius: 30px;
+  width: 1120px;
+  height: 380px;
 `;
 const TrackTitle = styled.div`
-  padding: 60px 50px;
-  font-size: 64px;
+  padding: 50px;
+  font-size: 45px;
   font-weight: 900;
   color: #abb6ff;
 `;
 const TrackSubTitle = styled.div`
   padding: 5px 30px 20px 50px;
-  font-size: 22px;
+  font-size: 17px;
   font-weight: 900;
 `;
 const ContentContainer = styled.div`
@@ -153,7 +153,7 @@ const ContentContainer = styled.div`
 `;
 const TrackContent = styled.li`
   margin-left: 30px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   color: #ababab;
-  font-size: 22px;
+  font-size: 17px;
 `;

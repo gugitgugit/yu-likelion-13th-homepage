@@ -55,37 +55,38 @@ export default Schedule;
 
 const Wrapper = styled.div`
   width: 100%;
+  margin: 0px 200px;
   color: white;
   position: absolute;
   top: 4675px;
 `;
 const Title = styled.div`
   margin-bottom: 30px;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bolder;
 `;
 
 const ScheduleContainer = styled.div`
   display: flex;
-  gap: 30px;
+  gap: 10px;
 `;
 const ScheduleBox = styled.div`
-  width: 300px;
-  height: 310px;
+  width: 240px;
+  height: 240px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  border: 1px solid rgba(222, 222, 222, 0.4);
+  border: 1px solid rgba(153, 153, 153, 0.2);
   background-color: rgba(171, 171, 171, 0.2);
-  border-radius: 40px;
+  border-radius: 30px;
 `;
 
 // 일정 내용
 const ScheduleMonth = styled.div`
   padding: 10px;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bolder;
   color: #abb6ff;
 `;
@@ -96,7 +97,7 @@ const MainEvent = styled.div`
   align-items: center;
 `;
 const DetailSchedule = styled.div`
-  font-size: 22px;
+  font-size: 17px;
   color: #ababab;
 `;
 
