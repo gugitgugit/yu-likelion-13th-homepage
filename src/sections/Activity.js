@@ -45,9 +45,11 @@ const Activity = () => {
       <Title>주요 활동</Title>
       <ActivityContainer>
         {activityList.map((activity) => (
-          <ActivityContent key={activity.id} bgimg={activity.img}>
-            <ActivityTitle>{activity.title}</ActivityTitle>
-          </ActivityContent>
+          <BorderBox key={activity.id}>
+            <ActivityContent bgimg={activity.img}>
+              <ActivityTitle>{activity.title}</ActivityTitle>
+            </ActivityContent>
+          </BorderBox>
         ))}
       </ActivityContainer>
     </Wrapper>
@@ -73,13 +75,16 @@ const ActivityContainer = styled.div`
   flex-wrap: wrap;
   gap: 30px;
 `;
+const BorderBox = styled.div`
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+`;
 const ActivityContent = styled.div`
   background-image:
     linear-gradient(rgba(79, 39, 21, 0.8), transparent),
     url(${(props) => props.bgimg});
   background-size: cover;
-  border: 1px solid rgb(153, 153, 153, 0.7);
-  border-radius: 30px;
+  border-radius: 29px;
   width: 350px;
   height: 220px;
 `;

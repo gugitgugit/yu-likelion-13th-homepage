@@ -132,7 +132,7 @@ const TrackSlider = styled.div`
 const TrackBox = styled.div`
   flex-shrink: 0;
   background-color: rgba(171, 171, 171, 0.2);
-  border: 1px solid rgba(222, 222, 222, 0.2);
+  border: 1px solid rgba(153, 153, 153, 0.2);
   border-radius: 30px;
   width: 1120px;
   height: 380px;
