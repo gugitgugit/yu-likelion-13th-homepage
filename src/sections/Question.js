@@ -65,20 +65,21 @@ export default Question;
 
 const Wrapper = styled.div`
   width: 100%;
+  margin: 0px 200px;
   color: white;
   position: absolute;
-  top: 5375px;
+  top: 5360px;
 `;
 const Title = styled.div`
   margin-bottom: 30px;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bolder;
 `;
 const QuestionContainer = styled.div`
   margin-bottom:  500px;
 `;
 const QnABox = styled.div`
-  font-size: 22px;
+  font-size: 17px;
   margin-bottom: 25px;
 `;
 const QuestionContent = styled.div`
