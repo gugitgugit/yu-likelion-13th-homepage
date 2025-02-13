@@ -57,31 +57,33 @@ const Activity = () => {
 export default Activity;
 
 const Wrapper = styled.div`
+  width: 100%;
+  margin: 0px 200px;
   color: white;
   position: absolute;
   top: 3597px;
 `;
 const Title = styled.div`
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bolder;
   margin-bottom: 30px;
 `;
 const ActivityContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 35px;
+  gap: 30px;
 `;
 const ActivityContent = styled.div`
   background-image:
     linear-gradient(rgba(79, 39, 21, 0.8), transparent),
     url(${(props) => props.bgimg});
   background-size: cover;
-  border: 1.2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 40px;
-  width: 480px;
-  height: 280px;
+  border: 1px solid rgb(153, 153, 153, 0.7);
+  border-radius: 30px;
+  width: 350px;
+  height: 220px;
 `;
 const ActivityTitle = styled.div`
-  padding: 30px;
-  font-size: 22px;
+  padding: 20px;
+  font-size: 17px;
 `;
