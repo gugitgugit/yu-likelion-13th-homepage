@@ -28,20 +28,28 @@ const Apply = () => {
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
+  const handleScroll = () => {
+    const element = document.getElementById('introduction');
+    const background = document.querySelector('.background');
+
+    if (element && background) {
+      const yOffset = -100;
+      const y =
+        element.getBoundingClientRect().top + background.scrollTop + yOffset;
+
+      background.scrollTo({
+        top: y,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
     return () => clearInterval(timer);
   }, []);
-
-  // TODO: 아래로 스크롤 높이 조정
-  const handleScrollDown = () => {
-    window.scrollBy({
-      top: 50,
-      behavior: 'smooth',
-    });
-  };
 
   return (
     <ApplyWrapper>
@@ -76,7 +84,7 @@ const Apply = () => {
         </TimerContainer>
       </TimerWrapper>
       <ApplyButton>13기 지원하기</ApplyButton>
-      <ArrowImage src={arrowImg} onClick={handleScrollDown} />
+      <ArrowImage src={arrowImg} onClick={handleScroll} />
     </ApplyWrapper>
   );
 };

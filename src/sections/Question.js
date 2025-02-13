@@ -67,7 +67,6 @@ export default Question;
 
 const Wrapper = styled.div`
   width: 100%;
-  margin: 0px 200px;
   color: white;
   position: absolute;
   top: 5360px;

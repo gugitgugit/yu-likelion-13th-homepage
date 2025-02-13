@@ -4,7 +4,7 @@ import Img1 from 'src/assets/introduction/img1.svg';
 import Img2 from 'src/assets/introduction/img2.svg';
 import Img3 from 'src/assets/introduction/img3.svg';
 
-const Introduction = () => {
+const Introduction = (props) => {
   const imageList = [
     {
       id: 1,
@@ -36,7 +36,7 @@ const Introduction = () => {
   ];
 
   return (
-    <Container>
+    <Container {...props}>
       <Title>
         <span style={{ fontSize: '22px', fontWeight: '600' }}>
           국내외 121개 대학, 4천여 명이 활동하는
@@ -79,11 +79,10 @@ const Introduction = () => {
 export default Introduction;
 
 const Container = styled.div`
-  margin: 160px 200px;
   width: 100%;
   color: white;
   position: absolute;
-  top: 1320px;
+  top: 1456px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -100,7 +99,7 @@ const Title = styled.div`
 const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
   margin-top: 30px;
 `;
 

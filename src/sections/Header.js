@@ -26,10 +26,21 @@ const Header = () => {
     }
   };
 
+  const handleScrollTop = () => {
+    const background = document.querySelector('.background');
+
+    if (background) {
+      background.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <HeaderContainer>
       <ContentContainer>
-        <LogoContainer>
+        <LogoContainer onClick={() => handleScrollTop()}>
           <LikeLionLogo />
           <LikeLionTitle>LIKELION YU</LikeLionTitle>
         </LogoContainer>
@@ -70,6 +81,7 @@ const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
+  cursor: pointer;
 `;
 
 const LikeLionLogo = styled(Logo)`

@@ -55,7 +55,6 @@ export default Schedule;
 
 const Wrapper = styled.div`
   width: 100%;
-  margin: 0px 200px;
   color: white;
   position: absolute;
   top: 4675px;
@@ -68,11 +67,11 @@ const Title = styled.div`
 
 const ScheduleContainer = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 20px;
 `;
 const ScheduleBox = styled.div`
-  width: 240px;
-  height: 240px;
+  width: 325px;
+  height: 325px;
   display: flex;
   flex-direction: column;
   justify-content: center;

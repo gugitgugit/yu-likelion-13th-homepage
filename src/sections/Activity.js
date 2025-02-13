@@ -59,8 +59,7 @@ const Activity = (props) => {
 export default Activity;
 
 const Wrapper = styled.div`
-  width: 100%;
-  margin: 0px 200px;
+  width: 1520px;
   color: white;
   position: absolute;
   top: 3597px;
@@ -71,10 +70,9 @@ const Title = styled.div`
   margin-bottom: 30px;
 `;
 const ActivityContainer = styled.div`
-  width: 1120px;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 37px;
 `;
 const BorderBox = styled.div`
   border-radius: 30px;
@@ -86,8 +84,8 @@ const ActivityContent = styled.div`
     url(${(props) => props.bgimg});
   background-size: cover;
   border-radius: 29px;
-  width: 350px;
-  height: 220px;
+  width: 480px;
+  height: 304px;
 `;
 const ActivityTitle = styled.div`
   padding: 20px;

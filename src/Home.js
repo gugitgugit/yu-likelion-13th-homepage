@@ -21,7 +21,7 @@ const Home = () => {
       <Header />
       <ContentContainer>
         <Apply />
-        <Introduction />
+        <Introduction id="introduction" />
         <Track id="track" />
         <Activity id="activity" />
         <Schedule id="schedule" />

@@ -34,13 +34,13 @@ export default Footer;
 
 const FooterContainer = styled.div`
   width: 100%;
-  height: 400px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: end;
   background-color: #1d1f29;
   position: absolute;
-  top: 7027px;
+  top: 6500px;
   z-index: 3;
 `;
 
@@ -48,7 +48,7 @@ const ContentContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 1520px;
-  margin-bottom: 66px;
+  margin-bottom: 40px;
 `;
 
 const InfoContainer = styled.div`
