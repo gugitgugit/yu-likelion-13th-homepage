@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const Track = () => {
+const Track = (props) => {
   const [selectedTrack, setSelectedTrack] = useState(1);
   const trackList = [
     {
@@ -40,7 +40,7 @@ const Track = () => {
     },
   ];
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <Title>트랙소개</Title>
       <Content>
         영남대학교 멋쟁이사자처럼 13기는 기획/디자인, Front-end, Back-end 파트로

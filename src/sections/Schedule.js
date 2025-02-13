@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ThreeArrows from '../assets/three-arrows.png';
 
-const Schedule = () => {
+const Schedule = (props) => {
   const scheduleList = [
     {
       id: 1,
@@ -26,7 +26,7 @@ const Schedule = () => {
     },
   ];
   return (
-    <Wrapper>
+    <Wrapper {...props}>
       <Title>연간 일정</Title>
       <ScheduleContainer>
         {scheduleList.map((schedule) => (
