@@ -21,7 +21,7 @@ export const Ellipse1 = styled.div`
   border-radius: 3340px;
   background: radial-gradient(
     50% 50% at 50% 50%,
-    rgba(70, 93, 251, 0.4) 0%,
+    rgba(70, 93, 251, 0.8) 0%,
     rgba(70, 93, 251, 0) 100%
   );
   position: absolute;
