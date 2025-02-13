@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ThreeArrows from '../assets/three-arrows.png'
 
 const Schedule = () => {
   const scheduleList = [
@@ -14,12 +15,12 @@ const Schedule = () => {
       content: ["아이디어톤"]
     },
     {
-      id: 2,
+      id: 3,
       month: 8,
       content: ["해커톤"]
     },
     {
-      id: 2,
+      id: 4,
       month: 12,
       content: ["데모데이"]
     },
@@ -29,15 +30,21 @@ const Schedule = () => {
       <Title>연간 일정</Title>
       <ScheduleContainer>
         {scheduleList.map(schedule=>(
-          <ScheduleBox key={schedule.id}>
-            <ScheduleMonth>{schedule.month}월</ScheduleMonth>
-            <MainEvent>
-              {schedule.content.map((event, index)=>(
-                <DetailSchedule key={index}>{event}</DetailSchedule>
-              ))}
-            </MainEvent>
-          </ScheduleBox>
-          // <NextIcon/>
+          <>
+            <ScheduleBox key={schedule.id}>
+              <ScheduleMonth>{schedule.month}월</ScheduleMonth>
+              <MainEvent>
+                {schedule.content.map((event, index)=>(
+                  <DetailSchedule key={index}>{event}</DetailSchedule>
+                ))}
+              </MainEvent>
+            </ScheduleBox>
+            {schedule.id === 4 ? null :
+              <IconContainer>
+                <NextIcon src={ThreeArrows}/>
+              </IconContainer>
+            }
+          </>
         ))}
       </ScheduleContainer>
     </Wrapper>
@@ -49,7 +56,6 @@ export default Schedule;
 const Wrapper = styled.div`
   width: 100%;
   margin: 500px 0px;
-  border: 1px solid red;
   background-color: black;
   color: white;
 `;
@@ -61,7 +67,7 @@ const Title = styled.div`
 
 const ScheduleContainer = styled.div`
   display: flex;
-  gap: 70px;
+  gap: 30px;
 `;
 const ScheduleBox = styled.div`
   width: 300px;
@@ -92,4 +98,14 @@ const MainEvent = styled.div`
 const DetailSchedule = styled.div`
   font-size: 22px;
   color: #ABABAB;
+`;
+
+const IconContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const NextIcon = styled.img`
+  width: 30px;
+  height: 30px;
 `;
