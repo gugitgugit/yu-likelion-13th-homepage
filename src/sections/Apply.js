@@ -210,4 +210,7 @@ const ApplyButton = styled.a`
   font-weight: 600;
   line-height: 29px;
   margin-top: 70px;
+  &:hover {
+    background: #ba4900;
+  }
 `;

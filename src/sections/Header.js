@@ -120,7 +120,8 @@ const NavBtn = styled.div`
 
 const ApplyBtn = styled.a`
   display: flex;
-  padding: 15px 40px;
+  height: 59px;
+  padding: 0px 40px;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -130,4 +131,7 @@ const ApplyBtn = styled.a`
   color: #fff;
   font-size: 16px;
   font-weight: 600;
+  &:hover {
+    background: #ba4900;
+  }
 `;
