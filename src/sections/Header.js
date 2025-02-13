@@ -108,7 +108,7 @@ const NavBtn = styled.div`
 
 const ApplyBtn = styled.a`
   display: flex;
-  padding: 20px 40px;
+  padding: 15px 40px;
   justify-content: center;
   align-items: center;
   text-decoration: none;
