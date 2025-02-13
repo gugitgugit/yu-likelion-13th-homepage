@@ -64,10 +64,10 @@ const Question = () => {
 export default Question;
 
 const Wrapper = styled.div`
-  margin: 160px 0px;
   width: 100%;
-  background-color: black;
   color: white;
+  position: absolute;
+  top: 5375px;
 `;
 const Title = styled.div`
   margin-bottom: 30px;
