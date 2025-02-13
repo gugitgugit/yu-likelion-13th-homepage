@@ -71,6 +71,7 @@ const Title = styled.div`
   margin-bottom: 30px;
 `;
 const ActivityContainer = styled.div`
+  width: 1120px;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
