@@ -100,7 +100,9 @@ const Apply = () => {
           </TimeBox>
         </TimerContainer>
       </TimerWrapper>
-      <ApplyButton>13기 지원하기</ApplyButton>
+      <ApplyButton href="https://docs.google.com/forms/d/e/1FAIpQLSedM5oxRAMbTkicDbB5jtgsfUvbkUOJqdXrEkKuxeX6dvdtmw/viewform">
+        13기 지원하기
+      </ApplyButton>
       <ArrowImage src={arrowImg} onClick={handleScroll} />
     </ApplyWrapper>
   );
@@ -229,6 +231,7 @@ const ApplyButton = styled.a`
   font-weight: 600;
   line-height: 29px;
   margin-top: 70px;
+  text-decoration: none;
   &:hover {
     background: #ba4900;
   }
