@@ -12,6 +12,8 @@ export const LionImg = styled.div`
   position: absolute;
   top: 894px;
   right: -423px;
+  transform: translateZ(0);
+  overflow: hidden;
 `;
 
 export const Ellipse1 = styled.div`
