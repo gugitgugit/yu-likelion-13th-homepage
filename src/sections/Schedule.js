@@ -30,7 +30,7 @@ const Schedule = (props) => {
       <Title>연간 일정</Title>
       <ScheduleContainer>
         {scheduleList.map((schedule) => (
-          <div key={schedule.id}>
+          <ScheduleBoxContainer key={schedule.id}>
             <ScheduleBox>
               <ScheduleMonth>{schedule.month}월</ScheduleMonth>
               <MainEvent>
@@ -44,7 +44,7 @@ const Schedule = (props) => {
                 <NextIcon src={ThreeArrows} />
               </IconContainer>
             )}
-          </div>
+          </ScheduleBoxContainer>
         ))}
       </ScheduleContainer>
     </Wrapper>
@@ -69,6 +69,11 @@ const ScheduleContainer = styled.div`
   display: flex;
   gap: 20px;
 `;
+
+const ScheduleBoxContainer = styled.div`
+  display: flex;
+`;
+
 const ScheduleBox = styled.div`
   width: 325px;
   height: 325px;

@@ -81,7 +81,7 @@ const BorderBox = styled.div`
 const ActivityContent = styled.div`
   background-image:
     linear-gradient(rgba(79, 39, 21, 0.8), transparent),
-    url(${($bgimg) => $bgimg});
+    url(${(props) => props.$bgimg});
   background-size: cover;
   border-radius: 29px;
   width: 480px;
