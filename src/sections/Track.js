@@ -134,9 +134,7 @@ const TrackSlider = styled.div`
   display: flex;
   gap: 40px;
   transition: transform 0.6s ease-in-out;
-  transform: translateX(
-    ${(props) => (props.selectedTrack - 1) * -1160}px
-  ); // 박스 너비(1420px) + gap(40px)
+  transform: translateX(${(props) => (props.selectedTrack - 1) * -1560}px);
 `;
 
 const TrackBox = styled.div`
