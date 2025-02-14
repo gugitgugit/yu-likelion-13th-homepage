@@ -60,7 +60,7 @@ const Wrapper = styled.div`
   top: 4675px;
 `;
 const Title = styled.div`
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-size: 30px;
   font-weight: bolder;
 `;
@@ -85,7 +85,7 @@ const ScheduleBox = styled.div`
 // 일정 내용
 const ScheduleMonth = styled.div`
   padding: 10px;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bolder;
   color: #abb6ff;
 `;
@@ -96,7 +96,7 @@ const MainEvent = styled.div`
   align-items: center;
 `;
 const DetailSchedule = styled.div`
-  font-size: 17px;
+  font-size: 24px;
   color: #ababab;
 `;
 

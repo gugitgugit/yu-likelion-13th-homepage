@@ -19,6 +19,7 @@ const Home = () => {
   return (
     <Background className="background">
       <Header />
+      <BlurComponents />
       <ContentContainer>
         <Apply />
         <Introduction id="introduction" />
@@ -38,6 +39,16 @@ const Home = () => {
 
 export default Home;
 
+const BlurComponents = () => {
+  return (
+    <>
+      {[...Array(100)].map((_, index) => (
+        <Blur key={index} top={index * 1} blur={(100 - index) * 0.1} />
+      ))}
+    </>
+  );
+};
+
 const Background = styled.div`
   display: flex;
   flex-direction: column;
@@ -53,4 +64,15 @@ const Background = styled.div`
 const ContentContainer = styled.div`
   width: 1520px;
   z-index: 2;
+`;
+
+const Blur = styled.div`
+  width: 90%;
+  height: 2px;
+  position: fixed;
+  top: ${({ top }) => `${top}px`};
+  overflow: hidden;
+  z-index: 3;
+  backdrop-filter: blur(${({ blur }) => `${blur}px`});
+  pointer-events: none;
 `;

@@ -65,7 +65,7 @@ const Wrapper = styled.div`
   top: 3597px;
 `;
 const Title = styled.div`
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bolder;
   margin-bottom: 30px;
 `;
@@ -89,5 +89,5 @@ const ActivityContent = styled.div`
 `;
 const ActivityTitle = styled.div`
   padding: 20px;
-  font-size: 17px;
+  font-size: 24px;
 `;

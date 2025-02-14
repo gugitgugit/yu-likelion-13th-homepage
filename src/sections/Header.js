@@ -67,14 +67,15 @@ const HeaderContainer = styled.div`
   justify-content: center;
   position: sticky;
   top: 0px;
-  z-index: 3;
+  z-index: 5;
 `;
 
 const ContentContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 1520px;
-  margin: 21px 0px;
+  padding-top: 22px;
+  margin-bottom: 20px;
 `;
 
 const LogoContainer = styled.div`

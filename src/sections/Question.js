@@ -73,14 +73,14 @@ const Wrapper = styled.div`
 `;
 const Title = styled.div`
   margin-bottom: 30px;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bolder;
 `;
 const QuestionContainer = styled.div`
   margin-bottom: 500px;
 `;
 const QnABox = styled.div`
-  font-size: 17px;
+  font-size: 24px;
   margin-bottom: 25px;
 `;
 const QuestionContent = styled.div`

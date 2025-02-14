@@ -10,7 +10,7 @@ const Apply = () => {
     const difference = targetDate - new Date();
 
     if (difference <= 0) {
-      return { days: '00', hours: '00', minutes: '00' };
+      return { days: '00', hours: '00', minutes: '00', seconds: '00' };
     }
 
     const days = String(
@@ -22,11 +22,30 @@ const Apply = () => {
     const minutes = String(
       Math.floor((difference / (1000 * 60)) % 60)
     ).padStart(2, '0');
+    const seconds = String(Math.floor((difference / 1000) % 60)).padStart(
+      2,
+      '0'
+    );
 
-    return { days, hours, minutes };
+    return { days, hours, minutes, seconds };
   };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState({
+    days: '00',
+    hours: '00',
+    minutes: '00',
+    seconds: '00',
+  });
+
+  useEffect(() => {
+    setTimeLeft(calculateTimeLeft()); // ✅ 초기 상태를 업데이트
+
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   const handleScroll = () => {
     const element = document.getElementById('introduction');
@@ -43,13 +62,6 @@ const Apply = () => {
       });
     }
   };
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <ApplyWrapper>
@@ -81,6 +93,11 @@ const Apply = () => {
             <Number>{timeLeft.minutes[1]}</Number>
             <TimerText>분</TimerText>
           </TimeBox>
+          <TimeBox>
+            <Number>{timeLeft.seconds[0]}</Number>
+            <Number>{timeLeft.seconds[1]}</Number>
+            <TimerText>초</TimerText>
+          </TimeBox>
         </TimerContainer>
       </TimerWrapper>
       <ApplyButton>13기 지원하기</ApplyButton>
@@ -91,6 +108,7 @@ const Apply = () => {
 
 export default Apply;
 
+/* ✅ 스타일 */
 const ApplyWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -102,6 +120,7 @@ const ContentWrapper = styled.div`
   gap: 20px;
   margin-top: 50px;
 `;
+
 const TimerContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -109,6 +128,7 @@ const TimerContainer = styled.div`
   justify-content: center;
   gap: 50px;
 `;
+
 const TimerWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -135,7 +155,6 @@ const TimerTitle = styled.p`
 const TimerText = styled.p`
   font-size: 16px;
   color: #ffffff;
-
   position: absolute;
   right: -26px;
   bottom: 0px;

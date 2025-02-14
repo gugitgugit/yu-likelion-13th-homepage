@@ -91,14 +91,21 @@ const Wrapper = styled.div`
 `;
 const Title = styled.div`
   margin-bottom: 15px;
-  font-size: 30px;
-  font-weight: bold;
+  color: #fff;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%;
+  letter-spacing: -1.2px;
 `;
 const Content = styled.div`
   margin-bottom: 24px;
   color: #ababab;
-  font-size: 17px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
   line-height: 180%;
+  letter-spacing: -0.72px;
 `;
 
 const TrackDetail = styled.div``;
@@ -108,7 +115,11 @@ const ButtonContainer = styled.div`
 `;
 const ButtonItem = styled.div`
   margin: 40px 70px 30px 0px;
-  font-size: 17px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.72px;
   color: ${(props) => (props.active ? 'white' : '#ABABAB')};
   cursor: pointer;
   transition: color 0.3s ease-in-out;
@@ -132,27 +143,36 @@ const TrackBox = styled.div`
   flex-shrink: 0;
   background-color: rgba(171, 171, 171, 0.2);
   border: 1px solid rgba(153, 153, 153, 0.2);
-  border-radius: 30px;
-  width: 1120px;
-  height: 380px;
+  border-radius: 40px;
+  width: 1520px;
+  height: 520px;
 `;
 const TrackTitle = styled.div`
-  padding: 50px;
-  font-size: 45px;
-  font-weight: 900;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 140%; /* 89.6px */
+  letter-spacing: -1.92px;
+  padding: 60px;
   color: #abb6ff;
 `;
 const TrackSubTitle = styled.div`
-  padding: 5px 30px 20px 50px;
-  font-size: 17px;
-  font-weight: 900;
+  margin-left: 60px;
+  color: #fff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: -0.72px;
 `;
 const ContentContainer = styled.div`
-  margin-bottom: 20px;
+  margin-left: 24px;
 `;
 const TrackContent = styled.li`
-  margin-left: 30px;
-  padding-bottom: 10px;
   color: #ababab;
-  font-size: 17px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 180%;
+  letter-spacing: -0.72px;
 `;

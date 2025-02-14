@@ -38,7 +38,7 @@ const Introduction = (props) => {
   return (
     <Container {...props}>
       <Title>
-        <span style={{ fontSize: '22px', fontWeight: '600' }}>
+        <span style={{ fontSize: '32px', fontWeight: '600' }}>
           국내외 121개 대학, 4천여 명이 활동하는
         </span>
         <br />
@@ -92,7 +92,7 @@ const Title = styled.div`
   color: #ffffff;
   margin-bottom: 20px;
   font-weight: 700;
-  font-size: 35px;
+  font-size: 64px;
   line-height: 140%;
 `;
 

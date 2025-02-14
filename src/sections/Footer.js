@@ -40,7 +40,7 @@ const FooterContainer = styled.div`
   align-items: end;
   background-color: #1d1f29;
   position: absolute;
-  top: 6500px;
+  top: 6700px;
   z-index: 3;
 `;
 
