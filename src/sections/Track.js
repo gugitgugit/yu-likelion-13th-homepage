@@ -55,14 +55,14 @@ const Track = (props) => {
             <ButtonItem
               key={trackData.id}
               onClick={() => setSelectedTrack(trackData.id)}
-              active={selectedTrack === trackData.id}
+              $active={selectedTrack === trackData.id}
             >
               {trackData.title}
             </ButtonItem>
           ))}
         </ButtonContainer>
         <TrackContainer>
-          <TrackSlider selectedTrack={selectedTrack}>
+          <TrackSlider $selectedTrack={selectedTrack}>
             {trackList.map((trackData) => (
               <TrackBox key={trackData.id}>
                 <TrackTitle>{trackData.title}</TrackTitle>
@@ -120,7 +120,7 @@ const ButtonItem = styled.div`
   font-weight: 500;
   line-height: 120%;
   letter-spacing: -0.72px;
-  color: ${(props) => (props.active ? 'white' : '#ABABAB')};
+  color: ${($active) => ($active ? 'white' : '#ABABAB')};
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 `;
@@ -134,7 +134,7 @@ const TrackSlider = styled.div`
   display: flex;
   gap: 40px;
   transition: transform 0.6s ease-in-out;
-  transform: translateX(${(props) => (props.selectedTrack - 1) * -1560}px);
+  transform: translateX(${($selectedTrack) => ($selectedTrack - 1) * -1560}px);
 `;
 
 const TrackBox = styled.div`

@@ -38,7 +38,7 @@ const Apply = () => {
   });
 
   useEffect(() => {
-    setTimeLeft(calculateTimeLeft()); // ✅ 초기 상태를 업데이트
+    setTimeLeft(calculateTimeLeft());
 
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
@@ -100,7 +100,11 @@ const Apply = () => {
           </TimeBox>
         </TimerContainer>
       </TimerWrapper>
-      <ApplyButton href="https://docs.google.com/forms/d/e/1FAIpQLSedM5oxRAMbTkicDbB5jtgsfUvbkUOJqdXrEkKuxeX6dvdtmw/viewform">
+      <ApplyButton
+        href="https://docs.google.com/forms/d/e/1FAIpQLSedM5oxRAMbTkicDbB5jtgsfUvbkUOJqdXrEkKuxeX6dvdtmw/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         13기 지원하기
       </ApplyButton>
       <ArrowImage src={arrowImg} onClick={handleScroll} />

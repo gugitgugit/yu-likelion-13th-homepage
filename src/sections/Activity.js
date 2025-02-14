@@ -46,7 +46,7 @@ const Activity = (props) => {
       <ActivityContainer>
         {activityList.map((activity) => (
           <BorderBox key={activity.id}>
-            <ActivityContent bgimg={activity.img}>
+            <ActivityContent $bgimg={activity.img}>
               <ActivityTitle>{activity.title}</ActivityTitle>
             </ActivityContent>
           </BorderBox>
@@ -81,7 +81,7 @@ const BorderBox = styled.div`
 const ActivityContent = styled.div`
   background-image:
     linear-gradient(rgba(79, 39, 21, 0.8), transparent),
-    url(${(props) => props.bgimg});
+    url(${($bgimg) => $bgimg});
   background-size: cover;
   border-radius: 29px;
   width: 480px;

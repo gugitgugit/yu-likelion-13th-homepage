@@ -52,7 +52,11 @@ const Header = () => {
               </NavBtn>
             ))}
           </NavBtns>
-          <ApplyBtn href="https://docs.google.com/forms/d/e/1FAIpQLSedM5oxRAMbTkicDbB5jtgsfUvbkUOJqdXrEkKuxeX6dvdtmw/viewform">
+          <ApplyBtn
+            href="https://docs.google.com/forms/d/e/1FAIpQLSedM5oxRAMbTkicDbB5jtgsfUvbkUOJqdXrEkKuxeX6dvdtmw/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             13기 지원하기
           </ApplyBtn>
         </BtnsContainer>

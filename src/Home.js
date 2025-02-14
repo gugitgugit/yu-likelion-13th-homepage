@@ -43,7 +43,7 @@ const BlurComponents = () => {
   return (
     <>
       {[...Array(100)].map((_, index) => (
-        <Blur key={index} top={index * 1} blur={(100 - index) * 0.1} />
+        <Blur key={index} $top={index * 1} $blur={(100 - index) * 0.1} />
       ))}
     </>
   );
@@ -70,9 +70,9 @@ const Blur = styled.div`
   width: 90%;
   height: 2px;
   position: fixed;
-  top: ${({ top }) => `${top}px`};
+  top: ${({ $top }) => `${$top}px`};
   overflow: hidden;
   z-index: 3;
-  backdrop-filter: blur(${({ blur }) => `${blur}px`});
+  backdrop-filter: blur(${({ $blur }) => `${$blur}px`});
   pointer-events: none;
 `;

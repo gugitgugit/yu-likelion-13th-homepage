@@ -15,13 +15,25 @@ const Footer = () => {
           <Copyright>© 2024 LIKELION YU. All rights reserved.</Copyright>
         </InfoContainer>
         <NavBtns>
-          <NavBtn href="https://www.instagram.com/likelion_yu?igsh=MWRoNmJweXpwazU=">
+          <NavBtn
+            href="https://www.instagram.com/likelion_yu?igsh=MWRoNmJweXpwazU="
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Instagram />
           </NavBtn>
-          <KakaoBtn href="https://open.kakao.com/o/srpDYFdh">
+          <NavBtn
+            href="https://open.kakao.com/o/srpDYFdh"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Kakao />
-          </KakaoBtn>
-          <NavBtn href="https://github.com/Likelion-YeungNam-Univ">
+          </NavBtn>
+          <NavBtn
+            href="https://github.com/Likelion-YeungNam-Univ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Github />
           </NavBtn>
         </NavBtns>
@@ -90,12 +102,4 @@ const NavBtn = styled.a`
   height: 60px;
   border-radius: 100px;
   background: #464750;
-`;
-
-const KakaoBtn = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 60px;
 `;
