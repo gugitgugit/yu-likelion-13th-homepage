@@ -114,7 +114,6 @@ const Apply = () => {
 
 export default Apply;
 
-/* ✅ 스타일 */
 const ApplyWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -236,6 +235,7 @@ const ApplyButton = styled.a`
   line-height: 29px;
   margin-top: 70px;
   text-decoration: none;
+  transition: 0.2s;
   &:hover {
     background: #ba4900;
   }

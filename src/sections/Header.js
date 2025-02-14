@@ -138,6 +138,7 @@ const ApplyBtn = styled.a`
   color: #fff;
   font-size: 16px;
   font-weight: 600;
+  transition: 0.2s;
   &:hover {
     background: #ba4900;
   }
