@@ -72,6 +72,7 @@ const ScheduleContainer = styled.div`
 
 const ScheduleBoxContainer = styled.div`
   display: flex;
+  gap: 25px;
 `;
 
 const ScheduleBox = styled.div`
