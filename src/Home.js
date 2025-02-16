@@ -67,7 +67,7 @@ const ContentContainer = styled.div`
 `;
 
 const Blur = styled.div`
-  width: 90%;
+  width: 99%;
   height: 2px;
   position: fixed;
   top: ${({ $top }) => `${$top}px`};
